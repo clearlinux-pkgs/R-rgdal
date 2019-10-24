@@ -4,20 +4,20 @@
 #
 Name     : R-rgdal
 Version  : 1.4.6
-Release  : 1
+Release  : 2
 URL      : https://cran.r-project.org/src/contrib/rgdal_1.4-6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgdal_1.4-6.tar.gz
 Summary  : Bindings for the 'Geospatial' Data Abstraction Library
 Group    : Development/Tools
 License  : BSD-3-Clause GPL-2.0+ MIT
 Requires: R-rgdal-lib = %{version}-%{release}
-Requires: R-maptools
 Requires: R-sp
 BuildRequires : R-maptools
 BuildRequires : R-sp
 BuildRequires : buildreq-R
 BuildRequires : gdal-dev
 BuildRequires : proj-dev
+BuildRequires : util-linux
 
 %description
 Summary of rgdal installation and drivers
@@ -44,10 +44,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571094501
+export SOURCE_DATE_EPOCH=1571889601
 
 %install
-export SOURCE_DATE_EPOCH=1571094501
+export SOURCE_DATE_EPOCH=1571889601
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
