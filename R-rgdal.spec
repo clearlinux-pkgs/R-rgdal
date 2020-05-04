@@ -4,7 +4,7 @@
 #
 Name     : R-rgdal
 Version  : 1.4.8
-Release  : 7
+Release  : 8
 URL      : https://cran.r-project.org/src/contrib/rgdal_1.4-8.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgdal_1.4-8.tar.gz
 Summary  : Bindings for the 'Geospatial' Data Abstraction Library
@@ -38,21 +38,22 @@ lib components for the R-rgdal package.
 
 %prep
 %setup -q -c -n rgdal
+cd %{_builddir}/rgdal
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1575396939
+export SOURCE_DATE_EPOCH=1588615718
 
 %install
-export SOURCE_DATE_EPOCH=1575396939
+export SOURCE_DATE_EPOCH=1588615718
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
