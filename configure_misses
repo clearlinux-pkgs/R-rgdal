@@ -1,6 +1,3 @@
-Configure miss: /usr/bin/svnversion
-Configure miss: GDAL: /usr/share/gdal/pcs.csv readable
-Configure miss: /usr/bin/svnversion
-Configure miss: GDAL: /usr/share/gdal/pcs.csv readable
-Configure miss: /usr/bin/svnversion
-Configure miss: GDAL: /usr/share/gdal/pcs.csv readable
+Configure miss: Using GDAL < 3 with PROJ >= 6
+Configure miss: Using GDAL < 3 with PROJ >= 6
+Configure miss: Using GDAL < 3 with PROJ >= 6
