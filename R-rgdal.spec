@@ -4,7 +4,7 @@
 #
 Name     : R-rgdal
 Version  : 1.5.28
-Release  : 29
+Release  : 30
 URL      : https://cran.r-project.org/src/contrib/rgdal_1.5-28.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgdal_1.5-28.tar.gz
 Summary  : Bindings for the 'Geospatial' Data Abstraction Library
@@ -44,10 +44,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1639587254
+export SOURCE_DATE_EPOCH=1641095019
 
 %install
-export SOURCE_DATE_EPOCH=1639587254
+export SOURCE_DATE_EPOCH=1641095019
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
