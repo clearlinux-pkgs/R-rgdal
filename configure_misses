@@ -4,6 +4,6 @@ Configure miss: /usr/bin/svnversion
 Configure miss: Using GDAL < 3 with PROJ >= 6
 Configure miss: Using GDAL < 3 with PROJ >= 6
 Configure miss: Using GDAL < 3 with PROJ >= 6
-Configure miss: g++ -std=gnu++11 option to enable C++11 features
-Configure miss: g++ -std=gnu++11 option to enable C++11 features
-Configure miss: g++ -std=gnu++11 option to enable C++11 features
+Configure miss: g++ -std=gnu++17 option to enable C++11 features
+Configure miss: g++ -std=gnu++17 option to enable C++11 features
+Configure miss: g++ -std=gnu++17 option to enable C++11 features
