@@ -4,7 +4,7 @@
 #
 Name     : R-rgdal
 Version  : 1.6.5
-Release  : 43
+Release  : 44
 URL      : https://cran.r-project.org/src/contrib/rgdal_1.6-5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgdal_1.6-5.tar.gz
 Summary  : Bindings for the 'Geospatial' Data Abstraction Library
@@ -18,9 +18,6 @@ BuildRequires : buildreq-R
 BuildRequires : gdal-dev
 BuildRequires : proj-dev
 BuildRequires : sqlite-autoconf-dev
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 Summary of rgdal installation and drivers
@@ -57,10 +54,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1677778675
+export SOURCE_DATE_EPOCH=1678837125
 
 %install
-export SOURCE_DATE_EPOCH=1677778675
+export SOURCE_DATE_EPOCH=1678837125
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/R-rgdal
 cp %{_builddir}/rgdal/LICENSE.note %{buildroot}/usr/share/package-licenses/R-rgdal/f74e642de545485c0383e3fa333530a67c891f8f || :
