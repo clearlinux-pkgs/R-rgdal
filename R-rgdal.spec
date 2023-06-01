@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-rgdal
-Version  : 1.6.6
-Release  : 51
-URL      : https://cran.r-project.org/src/contrib/rgdal_1.6-6.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/rgdal_1.6-6.tar.gz
+Version  : 1.6.7
+Release  : 52
+URL      : https://cran.r-project.org/src/contrib/rgdal_1.6-7.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/rgdal_1.6-7.tar.gz
 Summary  : Bindings for the 'Geospatial' Data Abstraction Library
 Group    : Development/Tools
 License  : BSD-3-Clause GPL-2.0+ MIT
@@ -48,16 +48,19 @@ license components for the R-rgdal package.
 
 %prep
 %setup -q -n rgdal
+pushd ..
+cp -a rgdal buildavx2
+popd
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1681922765
+export SOURCE_DATE_EPOCH=1685647203
 
 %install
-export SOURCE_DATE_EPOCH=1681922765
+export SOURCE_DATE_EPOCH=1685647203
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/R-rgdal
 cp %{_builddir}/rgdal/LICENSE.note %{buildroot}/usr/share/package-licenses/R-rgdal/f74e642de545485c0383e3fa333530a67c891f8f || :
@@ -98,6 +101,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
 R CMD check --no-manual --no-examples --no-codoc . || :
 
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
