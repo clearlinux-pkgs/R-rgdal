@@ -3,5 +3,5 @@ libc.so.6
 libgcc_s.so.1
 libgdal.so.33
 libm.so.6
-libproj.so.19
+libproj.so.25
 libstdc++.so.6
