@@ -5,7 +5,7 @@
 #
 Name     : R-rgdal
 Version  : 1.6.7
-Release  : 79
+Release  : 80
 URL      : https://cran.r-project.org/src/contrib/rgdal_1.6-7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rgdal_1.6-7.tar.gz
 Summary  : Bindings for the 'Geospatial' Data Abstraction Library
